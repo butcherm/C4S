@@ -4,34 +4,56 @@ body {
 h1 {Text-align: center;
     width: 520px;
     padding: 10px;
-    border: 5px solid gray;
-    margin: 0; 
+    margin: 10px; 
     font-family: "Verdana";
     font-size: 40pt;
  }
  
  h2{
-	font-family: "Verdana";
+	font-family: "Verdana";    
 	font-size: 20pt;
 }
 
-p { width: 1550px;
-    border: 5px solid gray;
-    margin: 0; 
-    font-family: "Verdana";
+p { font-family: "Verdana";
     font-size: 40pt;
     font-family: "Verdana, Ariel bold";
     font-size: 20pt;
 }
 
-li {
+nav {
 	font-family: "Verdana, Ariel bold";
+    background-color: greenyellow;
+    padding: 20px;
+    color: black;
     font-size: 20pt;
 	display: inline:
-	width: 10px;
-	length: 10px;
-	Background-color: dark grey
 }
+
+nav ol { 
+    list-style-type: none;
+    width: 600px
+    margin: auto;
+    text-align: center;}
+
+nav ol li {
+    display: inline;
+    color: white;
+    margin: 10px;
+}
+
+nav ol li a {
+        text-decoration: none;
+        color: black;
+        font-family: verdana;
+}
+
+nav ol li a:hover {
+        text-decoration : gray;
+        color: ;
+        font-family: verdana;
+}
+    
+
 	
 
 
