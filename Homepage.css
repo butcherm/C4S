@@ -1,7 +1,9 @@
 body {
     background-color: #d0e4fe;
 }
-h1 {Text-align: center;
+h1 {
+    border: greenyellow;
+    Text-align: center;
     width: 520px;
     padding: 10px;
     margin: 10px; 
@@ -26,7 +28,7 @@ nav {
     padding: 20px;
     color: black;
     font-size: 20pt;
-	display: inline:
+	display: block:
 }
 
 nav ol { 
