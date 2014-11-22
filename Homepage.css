@@ -2,13 +2,12 @@ body {
     background-color: #d0e4fe;
 }
 h1 {
-    border: greenyellow;
-    Text-align: center;
-    width: 520px;
+    width: 1200px;
     padding: 10px;
-    margin: 10px; 
+    border: 5px solid gray;
+    margin: 0; 
     font-family: "Verdana";
-    font-size: 40pt;
+    font-size: 40px;
  }
  
  h2{
