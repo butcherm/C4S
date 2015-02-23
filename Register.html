@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" media="screen" href="Register.css">
+    <title>Site Registration</title>
+	<script>
+	window.onload = function() {
+		console.log('onLoad');
+		var form = document.forms.register;
+		form.onsubmit = function() {
+			console.log('onSubmit');
+			if (form.name.value.length == 0) {
+				console.log('empty field');
+				document.getElementById('nameError').innerHTML = 'Name field empty'
+				return false;
+			} else {
+				document.getElementById('nameError').innerHTML = ''
+			} // if
+			return true;
+		} // onSubmit
+		
+		form.name.onblur = function() {
+			console.log('onBlur');
+			if (form.name.value.length == 0) {
+				console.log('empty field');
+				document.getElementById('nameError').innerHTML = 'Required Field';
+				return false;
+			} else {
+				document.getElementById('nameError').innerHTML = '';
+			} // if
+		} // onBlur
+		
+		form.phone.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.phone.value.length == 0 || isNaN(form.phone.value)) {
+				console.log('failed validation');
+				document.getElementById('phoneError').innerHTML = 'Invalid phone number';
+			} else {
+				document.getElementById('phoneError').innerHTML = '';
+			}
+		} // onKeyUp
+        
+      form.surname.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('snameError').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('snameError').innerHTML = '';
+			}
+		} // onKeyUp
+      
+       form.addname1.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('addError').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('addError').innerHTML = '';
+			}
+		} // onKeyUp
+       
+        form.addname2.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('add2Error').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('add2Error').innerHTML = '';
+			}
+		} // onKeyUp
+        
+        form.city.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('city').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('city').innerHTML = '';
+			}
+		} // onKeyUp
+        
+        form.postcode.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('postcode').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('postcode').innerHTML = '';
+			}
+		} // onKeyUp
+		
+        form.email.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('email').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('email').innerHTML = '';
+			}
+		} // onKeyUp
+        
+        form.username.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('username').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('usernam').innerHTML = '';
+			}
+		} // onKeyUp
+        
+        form.password.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('password').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('password').innerHTML = '';
+			}
+		} // onKeyUp
+        
+        form.tc.onkeyup = function() {
+			console.log('onKeyUp');
+			form.phone.value = form.phone.value.replace(' ', '');
+			if (form.surname.value.length == 0 || (form.snameError.value)) {
+				console.log('failed validation');
+				document.getElementById('tc').innerHTML = 'Required Field';
+			} else {
+				document.getElementById('tc').innerHTML = '';
+			}
+		} // onKeyUp
+        
+	} // onLoad
+	</script>
+</head>
+
+<h1>Site Registration</h1>
+<body style="margin:5em">
+	<form name="register" method="post" action="https://type-castle.codio.io/login.html">
+		<p>Forename *:</br><input type="text" name="name"/><span id="nameError"></span></p>
+        <p>Surname *:</br><input type="text" name="surname"/><span id="snameError"></span></p>
+        <p>Address Line 1 *:</br><input type="text" name="addname1"/><span id="addError"></span></p>
+        <p>Address Line 2 *:</br><input type="text" name="addname2"/><span id="add2Error"></span></p>
+        <p>City *:</br><input type="text" name="city"/><span id="city"></span></p>
+        <p>Postcode *:</br><input type="postcode" name="postcode"/><span id="postcode"></span></p>
+        <p>Date of Birth *:</br><input type="date" name="bdaytime"/><span id="dateofbirth"</span></p>
+		<p>Contact Number 1 *:</br><input type="tel" name="phone"/><span id="phoneError"></span></p>
+        <p>Contact Number 2 *:</br><input type="tel" name="altphone"/><span id="altphone"></span></p>
+        <p>E-mail Address *:</br><input type="email" name="email"/><span id="email"></span></p>
+        <p>Username *:</br><input type="text" name="username"/><span id="username"></span></p>
+        <p>Password *:</br><input type="password" name="pwd"/><span id="password"></span></p>
+        <p>I Agree to the Terms and Conditions *:</br><input type="checkbox" name="tc"/><span id="tc"></span></p> 
+		<p><input type="submit"/></p>
+	</form>    
+</body>
+<footer>
+<center>
+	Page Created by Matthew Butcher
+</center>
+</footer>
+</html>
